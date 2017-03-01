@@ -1,0 +1,307 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+        <link rel="stylesheet" href="black.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2><b>The State of Spark for <br> Big Data Social Science</b></h2>
+                </section>
+                <section>
+                    <section>
+                        <p>Me</p>
+                         <ul>
+                            <li>Alex, hi.</li><br>
+                            <li>Civic Data Scientist @ Urban Institute</li><br>
+                            <li>Professor of Data [Viz & Science] @ JHU & GU</li>
+                                <ul>
+                                    <li>Data Viz for Policy Analysis</li>
+                                    <li>Advanced Data Viz - Interactive Web Graphics</li>
+                                    <li>Data Science for Public Policy</li>
+                                </ul><br>
+                            <li>@alexcengler</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <img src="images/ms-cds.png" width="900"/>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <p><b>Data Technology <br>for Public Policy Research <br>in a Modern Thinktank</b><p>
+                        <img src="images/urban.png" width="700" />           
+                    </section>   
+                    <section>
+                        <img src="images/prison.png" width="800"/>
+                        <br> 
+                        <a href="http://webapp.urban.org/reducing-mass-incarceration/">Prison Population Forecaster</a>     
+                    </section>  
+                    <section>
+                        <iframe src="http://apps.urban.org/features/ncdb/immigrants-reshaping-residential-segregation/" width="1100" height="800"></iframe>
+                        <!--  <img src="images/immig.png" width="1100"/> --><br> 
+                        <a href="http://apps.urban.org/features/ncdb/immigrants-reshaping-residential-segregation/">Immigration and Residential Segregation</a>
+                    </section>
+                    <section>
+                        <h3>Tax Policy Center Model Modernization - Process</h3> 
+                        <ul>
+                            <li class="fragment">Version-Control with GitHub</li>
+                            <li class="fragment">Cloud-deploy on AWS;</li>
+                            <li class="fragment">Containerize with Docker;</li>
+                            <li class="fragment">Parallelize with R;</li>
+                        </ul>
+                    </section> 
+                    <section>
+                        <h3>Tax Policy Center Model Modernization - Applications</h3> 
+                        <ul>
+                            <li class="fragment">Bootstrapping of microdata (IRS SOI PUF);</li>
+                            <li class="fragment">Random draws from parameter distribution;</li>
+                            <li class="fragment">Gridsearch methods for optimal tax policy;</li>
+                        </ul><br><br>
+                        <p class="fragment">[Submitted an LOI proposing the implementation of these methods]</p>
+                    </section>                    
+                    <section>
+                        <h3>Administrative Synthetic Data</h3>
+                        <img src="images/bayes.gif" width="800"/>
+                    </section>   
+                    <section>
+                        <h3>Data Science Education</h3>
+                        <img src="images/ds-training.png" width="800"/>
+                    </section> 
+                    <section>
+                        <h3>Which has led to Data Science Projects</h3>
+                            <ul>
+                            <li>Machine Learning for measuring Tweet Sentiment aimed at policy officers/departments;</li>
+                            <li>Topic modeling w/ NLP of nursing survey;</li>
+                            <li>Launching <a href="http://shinyapps-stg.urban.org/dynasim-shiny1/">Shiny Applications</a> for Model Results;</li>
+                            <li>Student to School Routing Distance;</li>
+                        </ul>                   
+                    </section>   
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Spark Social Science</h3>
+                        <img src="images/sloan.png" width="600"/>
+                    </section>
+                    <section>
+                        <h3>Our Problem</h3>
+                        <ul>
+                            <li>Big Data</li>
+                            <li>Small Budget</li>
+                            <li>Advanced Statistics</li>
+                            <li>Programming Limitations</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>'Big Data'</h3>
+                         <ul>
+                            <li>~One Billion Rows (Growing to low tens of billions);</li>
+                            <li>Currently ~1TB of Data;</li>
+                            <li>Couple Hundred Columns;</li>
+                            <li>Ideally, this, or even several orders of magnitude higher, should be trivial.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3><u>Small</u> Budget</h3><br>
+                        
+                        <p>Affordability from Elasticity</p>
+                        <p>Standing Clusters - either in Cloud or on Premise are unaffordable.</p>
+                    </section>
+                    <section>
+                        <h3>Advanced Statistics<br>
+                        <img src="images/convex.png" width="800"/>
+                    </section>    
+                    <section>
+                        <h3>Programming Limitations</h3><br>
+                         <ul>
+                            <li>Preference for SAS/STATA</li>
+                            <li>Some R-Users, a few Python-Users</li>
+                            <li>Java/Scala/C are off the table</li>
+                        </ul>                                   
+                    </section>          
+                    <section>
+                        <h3>Accessibility as a General Concern</h3><br>
+                         <ul>
+                            <li>No Linux Command Line;</li>
+                            <li>No Cloud Expertise;</li>
+                            <li>No SSH/Telnet Experience;</li>
+                        </ul>                                   
+                    </section>     
+                </section>
+                <section>
+                    <section>
+                        <h3>Our Solution</h3>
+                        <ul>
+                            <li>Apache Spark</li>
+                            <li>R/Python with IDEs in Browser</li>
+                            <li>AWS Elastic MapReduce</li>
+                        </uL>
+                    </section>
+                    <section>
+                        <h3><a href="http://spark.apache.org/">Apache Spark</a></h3>
+                        <ul>
+                            <li>Distributed Memory Framework for Big Data</li>
+                            <li>Written in Scala/Java but has R/Python APIs</li>
+                            <li>Good & Improving Statistical Methods</li>
+                            <li>Free & Open Source</li>
+                        </ul><br>
+                        <img src='images/distribute.png' width="700"/>
+                    </section>
+
+                    <section>
+                        <p>Relatively Familiar Languages</p>
+                        <ul>
+                            <li><a href="https://github.com/UrbanInstitute/sparkr-tutorials">SparkR</a></li>
+                            <li><a href="https://github.com/UrbanInstitute/pyspark-tutorials">PySpark</a></li>
+                        </ul>
+                        <br><br><br>
+                        <p>Development Environments in Browser</p>
+                        <ul>
+                            <li>RStudio for R (SparkR)</li>
+                            <li>Jupyter Notebooks for Python (PySpark)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="images/rstudio.png" width="1000">
+                    </section>
+                   <section>
+                        <img src="images/jupyter.png" width="1000">
+                    </section>
+                    <section>
+                        <h4>Reading in Data</h4>
+                        <img src="images/readR.png" width="800">
+                    </section>
+                    <section>
+                        <h4>Data Manipulation</h4>
+                        <img src="images/manipR.png" width="800">
+                    </section>
+                    <section>
+                        <h4>Statistical Methods</h4>
+                        <img src="images/statsR.png" width="800">
+                    </section>
+                    <section>
+                        <h4>Statistical Functionality</h4>
+                        <img src="images/spark-stats.png" width="800">
+                    </section>
+                    <section>
+                        <h4>Histogram</h4>
+                        <img src="images/histR.png" width="800">
+                    </section>
+                    <section>
+                        <h3>Amazon Web Services (AWS) Elastic MapReduce (EMR)</h3>
+                        <ul>
+                            <li>Elastic - Only Pay for Clusters During Use</li>
+                            <li>Fast - 10-12 Min Spin Up with Bootstrap</li>
+                            <li>Free Data Transfer From S3 (AWS Storage)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>AWS EMR</h3>
+                        <p>Also Cheap: </p>
+                        <p>Four R3.8X Large EC2 Instances:
+                        </p>
+                        <ul>
+                            <li>244 GB Memory Each (~1TB Total)</li>
+                            <li>32v vCPU Each (128 Total)</li>
+                            <li>1300 GB SSD Storage</li>
+                        </ul>
+                        <p>All for ~$10/Hour</p>
+                    </section>
+                    <section>
+                        <h3>Our Solution (Theory)</h3>
+                        <img src="images/stack1.png" width="600"/>
+                    </section>
+                    <section>
+                        <h3>Our Solution (Reality)</h3>
+                        <img src="images/stack2.png" width="600"/>
+                    </section>
+                    <section>
+                        <h3>New Problem - How do Researchers Use This?</h3>
+                        <ul>
+                            <li>Create AWS Account</li>
+                            <li>Download PPM Key, Create PPK Key with PuttyGen</li>
+                            <li>Install AWS Command Line</li>
+                            <li>Reference Linux Command Line Bootstrap Script</li>
+                            <li>Install/Use Putty for SSH</li>
+                            <li>Run FoxyProxy for Portforwarding</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Instead: <a href="https://github.com/UrbanInstitute/spark-social-science/blob/master/sparkr/EMR_SPARK_RSTUDIO_TEMPLATE.json">AWS CloudFormation</a></h3>
+                    </section>
+                    <section>
+                        <img src="images/CF.png" width="800"/>
+                    </section>
+                    <section>
+                        <h3>Instead: AWS Command Line Interface</h3>
+                        <img src="images/cli.png" width="1000"/>
+                    </section>
+                    <section>
+                        <h3>Data Security & Access</h3>
+                        <ul>
+                            <li>Working towards FISMA Moderate</li>
+                            <li>Virtual Private Cloud</li>
+                            <li>Centrally Controlled Data Access in S3</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>All Project Outputs are on GitHub</h3>
+                        <ul>
+                            <li><a href="https://github.com/UrbanInstitute/spark-social-science">Spark Social Science</a></li>
+                            <li><a href="https://github.com/UrbanInstitute/sparkr-tutorials">SparkR Tutorials</a></li>
+                            <li><a href="https://github.com/UrbanInstitute/pyspark-tutorials">PySpark Tutorials</a></li>
+                            <li><a href="https://urbaninstitute.github.io/spark-social-science-manual/">Spark for Social Science - eBook</a></li>
+                        </ul>                      
+                    </section>
+                    <section>
+                        <h3>Project Implications - Applied</h3>
+                        <ul>
+                            <li class="fragment">Faster iterations of data work;</li>
+                            <li class="fragment">Working interactively w/ large admin datasets;</li>
+                            <li class="fragment">Non-traditional data sources
+                                <ul>
+                                <li>Zillow ZTrax</li>
+                                <li>Credit Card Data</li>
+                                <li>Satellite Data</li>
+                                <li>Internet of Things</li>
+                                </ul>
+                            </li>
+                        </ul>                      
+                    </section>
+                    <section>
+                        <h3>Project Implications - Educational</h3>
+                        <h4>Course: Advanced Big Data Methods using Spark</h4>
+                        <ul>
+                            <li>Linux Bash & AWS Cloud</li>
+                            <li>Parallel Processing</li>
+                            <li>Hadoop & HDFS</li>
+                            <li>Spark & Distributed Memory</li>
+                            <li>Parallelized Statistical Methods</li>
+                        </ul>
+
+                    </section>
+                    <section>
+                        <h3>Ongoing Work</h3>
+                        <ul>
+                            <li class="fragment"><a href="https://toree.apache.org/">Apache Toree - Kernel Flexibility for Spark;</a></li>
+                            <li class="fragment"><a href="http://geospark.datasyslab.org/">GeoSpark - Distributed Geospatial Statistics;</a></li>
+                            <li class="fragment"><a href="http://sryza.github.io/spark-timeseries/0.3.0/index.html">SparkTS - TimeSeries Analysis in Spark;</a></li>
+                            <li class="fragment"><a href="https://github.com/hail-is/HAIL">Stretch Goal: An Analog of the HAIL Project;</a></li>
+                        </ul>
+                    </section>                    
+                </section>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+        <script>
+            Reveal.initialize({
+                transition: 'default',  // fade/slide/convex/concave/zoom
+                transitionSpeed: 'slow'
+            });
+        </script>
+    </body>
+</html>
